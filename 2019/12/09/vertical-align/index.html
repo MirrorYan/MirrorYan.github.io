@@ -86,20 +86,20 @@
 <meta property="og:site_name" content="Mirror&#39;s Blog">
 <meta property="og:description" content="有些时候 vertical-align 的渲染结果并不同我们想象的一样。虽然现在已经有很多 CSS 属性可以完美替代 vertical-align 的渲染效果，但作为一个Front-End Programmer，怎么能不搞清楚它？  ☆作用对象：inline、inline-block子元素。 这个属性失效的情况：  作用对象是块级元素（因为块级元素会霸占整行）； 作用元素设置了浮动、定位等脱离文">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://mirroryan.github.io/2019/12/09/vertical-align/images/vertical-align/vertical-align-1.png">
-<meta property="og:image" content="https://mirroryan.github.io/2019/12/09/vertical-align/images/vertical-align/vertical-align-2.png">
-<meta property="og:image" content="https://mirroryan.github.io/2019/12/09/vertical-align/images/vertical-align/vertical-align-3.png">
-<meta property="og:image" content="https://mirroryan.github.io/2019/12/09/vertical-align/images/vertical-align/vertical-align-4.png">
-<meta property="og:image" content="https://mirroryan.github.io/2019/12/09/vertical-align/images/vertical-align/vertical-align-5.png">
-<meta property="og:image" content="https://mirroryan.github.io/2019/12/09/vertical-align/images/vertical-align/vertical-align-6.png">
-<meta property="og:image" content="https://mirroryan.github.io/2019/12/09/vertical-align/images/vertical-align/vertical-align-7.png">
-<meta property="og:image" content="https://mirroryan.github.io/2019/12/09/vertical-align/images/vertical-align/vertical-align-8.png">
-<meta property="og:image" content="https://mirroryan.github.io/2019/12/09/vertical-align/images/vertical-align/vertical-align-9.png">
-<meta property="og:updated_time" content="2019-12-09T06:42:39.697Z">
+<meta property="og:image" content="https://mirroryan.github.io/images/vertical-align/vertical-align-1.png">
+<meta property="og:image" content="https://mirroryan.github.io/images/vertical-align/vertical-align-2.png">
+<meta property="og:image" content="https://mirroryan.github.io/images/vertical-align/vertical-align-3.png">
+<meta property="og:image" content="https://mirroryan.github.io/images/vertical-align/vertical-align-4.png">
+<meta property="og:image" content="https://mirroryan.github.io/images/vertical-align/vertical-align-5.png">
+<meta property="og:image" content="https://mirroryan.github.io/images/vertical-align/vertical-align-6.png">
+<meta property="og:image" content="https://mirroryan.github.io/images/vertical-align/vertical-align-7.png">
+<meta property="og:image" content="https://mirroryan.github.io/images/vertical-align/vertical-align-8.png">
+<meta property="og:image" content="https://mirroryan.github.io/images/vertical-align/vertical-align-9.png">
+<meta property="og:updated_time" content="2019-12-09T06:45:03.202Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="vertical-align">
 <meta name="twitter:description" content="有些时候 vertical-align 的渲染结果并不同我们想象的一样。虽然现在已经有很多 CSS 属性可以完美替代 vertical-align 的渲染效果，但作为一个Front-End Programmer，怎么能不搞清楚它？  ☆作用对象：inline、inline-block子元素。 这个属性失效的情况：  作用对象是块级元素（因为块级元素会霸占整行）； 作用元素设置了浮动、定位等脱离文">
-<meta name="twitter:image" content="https://mirroryan.github.io/2019/12/09/vertical-align/images/vertical-align/vertical-align-1.png">
+<meta name="twitter:image" content="https://mirroryan.github.io/images/vertical-align/vertical-align-1.png">
 
 
 
@@ -271,7 +271,7 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-12-09T14:42:39+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-12-09T14:45:03+08:00">
                 2019-12-09
               </time>
             
@@ -373,53 +373,53 @@
 </tr>
 </tbody></table>
 <p>看表格的描述太抽象，还不如来点儿实际的～</p>
-<h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2><p>HTML 代码：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"container"</span>&gt;</span></span><br><span class="line">  Father Text</span><br><span class="line">  <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"content"</span>&gt;</span></span><br><span class="line">  	Child Text</span><br><span class="line">  <span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">img</span> <span class="attr">class</span>=<span class="string">"align"</span> <span class="attr">src</span>=<span class="string">"./images/vertical-align/vertical-align-1.png"</span> <span class="attr">alt</span>=<span class="string">"vertical align image"</span>&gt;</span></span><br><span class="line">  <span class="comment">&lt;!-- 下面的图片不作特定垂直对齐,作为一个参照 --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"./img/**.png"</span> <span class="attr">alt</span>=<span class="string">"reference image"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>HTML 代码：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"container"</span>&gt;</span></span><br><span class="line">  Father Text</span><br><span class="line">  <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"content"</span>&gt;</span></span><br><span class="line">  	Child Text</span><br><span class="line">  <span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">img</span> <span class="attr">class</span>=<span class="string">"align"</span> <span class="attr">src</span>=<span class="string">"./img/xx.png"</span> <span class="attr">alt</span>=<span class="string">"vertical align image"</span>&gt;</span></span><br><span class="line">  <span class="comment">&lt;!-- 下面的图片不作特定垂直对齐,作为一个参照 --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"./img/**.png"</span> <span class="attr">alt</span>=<span class="string">"reference image"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <ol>
 <li><p><strong><code>baseline</code></strong>：元素放在父元素的基线上。</p>
 <p>实际上文本子元素是文本内容放在父元素基线上。因为这是默认值，其他子元素都是<code>baseline</code>。</p>
-<p><img src="./images/vertical-align/vertical-align-1.png" alt="baseline"></p>
+<p><img src="/images/vertical-align/vertical-align-1.png" alt="baseline"></p>
 </li>
 <li><p><strong><code>top</code></strong>：元素的顶端与行中最高元素的顶端对齐。</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.align</span> &#123; <span class="attribute">vertical-align</span>: top; &#125;</span><br></pre></td></tr></table></figure>
 
 <p>从<code>baseline</code>看，这里的最高元素是参照图。</p>
-<p><img src="./images/vertical-align/vertical-align-2.png" alt="top"></p>
+<p><img src="/images/vertical-align/vertical-align-2.png" alt="top"></p>
 </li>
 <li><p><strong><code>text-top</code></strong>：元素的顶端与父元素字体的顶端对齐。</p>
-<p><img src="./images/vertical-align/vertical-align-3.png" alt="text-top"></p>
+<p><img src="/images/vertical-align/vertical-align-3.png" alt="text-top"></p>
 </li>
 <li><p><strong><code>middle</code></strong>：元素在父元素内垂直居中。</p>
 <p>可以看出，<code>middle</code>实际是指元素中部与父元素文本中部对齐。</p>
-<p><img src="./images/vertical-align/vertical-align-4.png" alt="middle"></p>
+<p><img src="/images/vertical-align/vertical-align-4.png" alt="middle"></p>
 </li>
 <li><p><strong><code>bottom</code></strong>：元素底端与行中最低元素底端对齐。</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.align</span> &#123; <span class="attribute">vertical-align</span>: bottom; &#125;</span><br></pre></td></tr></table></figure>
 
 <p>从<code>baseline</code>可以看出这里最低元素是 content 元素。</p>
-<p><img src="./images/vertical-align/vertical-align-5.png" alt="bottom"></p>
+<p><img src="/images/vertical-align/vertical-align-5.png" alt="bottom"></p>
 </li>
 <li><p><strong><code>text-bottom</code></strong>：元素底端与父元素文本底端对齐。</p>
 <blockquote>
 <p><font color="red">！</font>这和<code>baseline</code>是不一样的。</p>
 </blockquote>
-<p><img src="./images/vertical-align/vertical-align-6.png" alt="text-bottom"></p>
+<p><img src="/images/vertical-align/vertical-align-6.png" alt="text-bottom"></p>
 </li>
 <li><p><strong>长度值</strong>：使用定长表示元素底部与父元素基线的距离。</p>
 <p>正值升高元素，负值降低元素。0值等同于<code>baseline</code>。 </p>
 <figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.align</span> &#123;</span><br><span class="line">  vertical-allign: <span class="number">10px</span>; <span class="comment">// 元素相对于基线向下偏移2px</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p><img src="./images/vertical-align/vertical-align-7.png" alt="10px"></p>
+<p><img src="/images/vertical-align/vertical-align-7.png" alt="10px"></p>
 </li>
 <li><p><strong>百分比</strong>：元素底部相对于父元素基线移动相对于元素行高<code>line-height</code>的百分比。</p>
 <p>这里百分比是相对于元素的<code>line-height</code>值。</p>
 <figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.align</span> &#123; <span class="attribute">vertical-align</span>: -<span class="number">10%</span>; &#125;</span><br></pre></td></tr></table></figure>
 
 <p>假设<code>.align</code>本身未设置行高，继承的行高是<code>20px</code>，这里的<code>-10%</code>代表的实际值是<code>-10% × 20 = -2px</code>，所以是让元素下降 2 像素。</p>
-<p><img src="./images/vertical-align/vertical-align-8.png" alt="-2px"></p>
+<p><img src="/images/vertical-align/vertical-align-8.png" alt="-2px"></p>
 <p>设置<code>.align</code>行高为<code>100px</code>，这里的<code>-10%</code>代表的实际值是<code>-10% × 100 = -10px</code>，所以是让元素下降 10 像素。</p>
-<p><img src="./images/vertical-align/vertical-align-9.png" alt="-10px"></p>
+<p><img src="/images/vertical-align/vertical-align-9.png" alt="-10px"></p>
 <blockquote>
 <p><font color="red">！</font>IE6 / 7 下的<code>vertical-align</code>百分比值不支持小数的<code>line-height</code>。</p>
 </blockquote>
@@ -449,8 +449,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/12/09/index/" rel="next" title="Mirror 的博客">
-                <i class="fa fa-chevron-left"></i> Mirror 的博客
+              <a href="/2019/09/30/transform/" rel="next" title="Transform 对元素渲染的影响">
+                <i class="fa fa-chevron-left"></i> Transform 对元素渲染的影响
               </a>
             
           </div>
@@ -458,6 +458,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/12/09/index/" rel="prev" title="Mirror 的博客">
+                Mirror 的博客 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -571,7 +575,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#属性值"><span class="nav-number">1.</span> <span class="nav-text">属性值</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实现"><span class="nav-number">2.</span> <span class="nav-text">实现</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#属性值"><span class="nav-number">1.</span> <span class="nav-text">属性值</span></a></li></ol></div>
             
 
           </div>
