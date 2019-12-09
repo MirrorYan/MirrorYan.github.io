@@ -232,7 +232,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://mirroryan.github.io/2019/09/30/index/">
+    <link itemprop="mainEntityOfPage" href="https://mirroryan.github.io/2019/12/09/index/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Mirror">
@@ -251,7 +251,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/09/30/index/" itemprop="url">Mirror 的博客</a></h1>
+                <a class="post-title-link" href="/2019/12/09/index/" itemprop="url">Mirror 的博客</a></h1>
         
 
         <div class="post-meta">
@@ -263,8 +263,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-09-30T15:32:59+08:00">
-                2019-09-30
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-12-09T13:36:33+08:00">
+                2019-12-09
               </time>
             
 
@@ -305,7 +305,243 @@
           
             <h2 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h2><ul>
 <li><a href="/2019/09/30/transform/">Transform 对元素渲染的影响</a></li>
+<li><a href="#">vertical-align</a></li>
 </ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://mirroryan.github.io/2019/12/09/vertical-align/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Mirror">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Mirror's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/12/09/vertical-align/" itemprop="url">Untitled</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-12-09T13:17:19+08:00">
+                2019-12-09
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="vertical-align"><a href="#vertical-align" class="headerlink" title="vertical-align"></a>vertical-align</h1><blockquote>
+<p>有些时候 <code>vertical-align</code> 的渲染结果并不同我们想象的一样。<br>虽然现在已经有很多 CSS 属性可以完美替代 <code>vertical-align</code> 的渲染效果，但作为一个Front-End Programmer，怎么能不搞清楚它？</p>
+</blockquote>
+<p><font color="red">☆</font><strong>作用对象</strong>：<code>inline</code>、<code>inline-block</code>子元素。</p>
+<p>这个属性失效的情况：</p>
+<ol>
+<li>作用对象是块级元素（因为块级元素会霸占整行）；</li>
+<li>作用元素设置了浮动、定位等脱离文本流的属性（父元素设置这些属性不影响）；</li>
+<li>父元素是<code>flex</code>或<code>grid</code>布局（作用元素设置这些布局不影响）。</li>
+</ol>
+<h2 id="1-属性值"><a href="#1-属性值" class="headerlink" title="1. 属性值"></a>1. 属性值</h2><p>可选参数：</p>
+<table>
+<thead>
+<tr>
+<th align="center">值</th>
+<th align="center">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><code>baseline</code></td>
+<td align="center">(default) 元素放在父元素的基线上。</td>
+</tr>
+<tr>
+<td align="center"><code>top</code></td>
+<td align="center">元素的顶端与行中最高元素的顶端对齐</td>
+</tr>
+<tr>
+<td align="center"><code>text-top</code></td>
+<td align="center">元素的顶端与父元素内容区域的顶端(文字顶端)对齐。</td>
+</tr>
+<tr>
+<td align="center"><code>middle</code></td>
+<td align="center">元素在父元素内垂直居中。</td>
+</tr>
+<tr>
+<td align="center"><code>bottom</code></td>
+<td align="center">元素底端与行中最低元素底端对齐。</td>
+</tr>
+<tr>
+<td align="center"><code>text-bottom</code></td>
+<td align="center">元素底端与父元素文本的底端对齐。</td>
+</tr>
+<tr>
+<td align="center"><code>sub</code></td>
+<td align="center">降低元素的基线到父元素合适的下标位置。</td>
+</tr>
+<tr>
+<td align="center"><code>super</code></td>
+<td align="center">升高元素的基线到父元素合适的上标位置。</td>
+</tr>
+<tr>
+<td align="center"><code>inherit</code></td>
+<td align="center">采用父元素相关属性的相同的指定值。</td>
+</tr>
+<tr>
+<td align="center">长度</td>
+<td align="center">通过距离升高或降低元素。</td>
+</tr>
+<tr>
+<td align="center">%</td>
+<td align="center">通过相对于<code>line-height</code>属性的百分值升高或降低元素。</td>
+</tr>
+</tbody></table>
+<p>看表格的描述太抽象，还不如来点儿实际的～</p>
+<p>HTML 代码：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"container"</span>&gt;</span></span><br><span class="line">  Father Text</span><br><span class="line">  <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"content"</span>&gt;</span></span><br><span class="line">  	Child Text</span><br><span class="line">  <span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">img</span> <span class="attr">class</span>=<span class="string">"align"</span> <span class="attr">src</span>=<span class="string">"./img/xx.png"</span> <span class="attr">alt</span>=<span class="string">"vertical align image"</span>&gt;</span></span><br><span class="line">  <span class="comment">&lt;!-- 下面的图片不作特定垂直对齐,作为一个参照 --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"./img/**.png"</span> <span class="attr">alt</span>=<span class="string">"reference image"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ol>
+<li><p><strong><code>baseline</code></strong>：元素放在父元素的基线上。</p>
+<p>实际上文本子元素是文本内容放在父元素基线上。因为这是默认值，其他子元素都是<code>baseline</code>。</p>
+<p><img src="./images/vertical-align/vertical-align-1.png" alt="baseline"></p>
+</li>
+<li><p><strong><code>top</code></strong>：元素的顶端与行中最高元素的顶端对齐。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.align</span> &#123; <span class="attribute">vertical-align</span>: top; &#125;</span><br></pre></td></tr></table></figure>
+
+<p>从<code>baseline</code>看，这里的最高元素是参照图。</p>
+<p><img src="./images/vertical-align/vertical-align-2.png" alt="top"></p>
+</li>
+<li><p><strong><code>text-top</code></strong>：元素的顶端与父元素字体的顶端对齐。</p>
+<p><img src="./images/vertical-align/vertical-align-3.png" alt="text-top"></p>
+</li>
+<li><p><strong><code>middle</code></strong>：元素在父元素内垂直居中。</p>
+<p>可以看出，<code>middle</code>实际是指元素中部与父元素文本中部对齐。</p>
+<p><img src="./images/vertical-align/vertical-align-4.png" alt="middle"></p>
+</li>
+<li><p><strong><code>bottom</code></strong>：元素底端与行中最低元素底端对齐。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.align</span> &#123; <span class="attribute">vertical-align</span>: bottom; &#125;</span><br></pre></td></tr></table></figure>
+
+<p>从<code>baseline</code>可以看出这里最低元素是 content 元素。</p>
+<p><img src="./images/vertical-align/vertical-align-5.png" alt="bottom"></p>
+</li>
+<li><p><strong><code>text-bottom</code></strong>：元素底端与父元素文本底端对齐。</p>
+<blockquote>
+<p><font color="red">！</font>这和<code>baseline</code>是不一样的。</p>
+</blockquote>
+<p><img src="./images/vertical-align/vertical-align-6.png" alt="text-bottom"></p>
+</li>
+<li><p><strong>长度值</strong>：使用定长表示元素底部与父元素基线的距离。</p>
+<p>正值升高元素，负值降低元素。0值等同于<code>baseline</code>。 </p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.align</span> &#123;</span><br><span class="line">  vertical-allign: <span class="number">10px</span>; <span class="comment">// 元素相对于基线向下偏移2px</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="./images/vertical-align/vertical-align-7.png" alt="10px"></p>
+</li>
+<li><p><strong>百分比</strong>：元素底部相对于父元素基线移动相对于元素行高<code>line-height</code>的百分比。</p>
+<p>这里百分比是相对于元素的<code>line-height</code>值。</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.align</span> &#123; <span class="attribute">vertical-align</span>: -<span class="number">10%</span>; &#125;</span><br></pre></td></tr></table></figure>
+
+<p>假设<code>.align</code>本身未设置行高，继承的行高是<code>20px</code>，这里的<code>-10%</code>代表的实际值是<code>-10% × 20 = -2px</code>，所以是让元素下降 2 像素。</p>
+<p><img src="./images/vertical-align/vertical-align-8.png" alt="-2px"></p>
+<p>设置<code>.align</code>行高为<code>100px</code>，这里的<code>-10%</code>代表的实际值是<code>-10% × 100 = -10px</code>，所以是让元素下降 10 像素。</p>
+<p><img src="./images/vertical-align/vertical-align-9.png" alt="-10px"></p>
+<blockquote>
+<p><font color="red">！</font>IE6 / 7 下的<code>vertical-align</code>百分比值不支持小数的<code>line-height</code>。</p>
+</blockquote>
+</li>
+</ol>
 
           
         
@@ -565,7 +801,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
